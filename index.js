@@ -1,7 +1,7 @@
 
 /* Recursion Function */
 const fact = (n) => {
-    if(n===0){
+    if(n === 0){
         return 1 ;
     }else{
         return  n * fact(n-1)
@@ -9,7 +9,13 @@ const fact = (n) => {
 
 }
 
-console.log(fact(5))
+const checkSign = (n) =>{
+  return n < 0 ? 0 : n  
+}
+
+console.log(fact(checkSign(-5)));
+console.log(fact(checkSign(0)));
+console.log(fact(checkSign(5)));
 
 
 /*Closures */
