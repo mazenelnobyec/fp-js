@@ -9,6 +9,13 @@ const fact = (n) => {
 
 }
 
+const upFact = (n,f=1) => {
+   
+   return f === n+1 ? 1 : f * upFact(n,f+1)
+
+}
+
+
 const checkSign = (n) =>{
   return n < 0 ? 0 : n  
 }
@@ -16,15 +23,12 @@ const checkSign = (n) =>{
 console.log(fact(checkSign(-5)));
 console.log(fact(checkSign(0)));
 console.log(fact(checkSign(5)));
-
+console.log(upFact(checkSign(5)));
 
 /*Closures */
 function newCounter() {
     let count = 0;
-    return function () {
-        count++;
-        return count;
-    }
+    return () => ++count;
 }
 const nc = newCounter();
 
