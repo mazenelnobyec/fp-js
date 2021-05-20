@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="billButton" >Bill me</button>
+
+    <script>
+        //How to Handle Events
+        const btn = document.getElementById('billButton')
+        
+        const billTheUser = (event,some, sales, data) => {
+            console.log(some,sales,data)
+        }
+        
+        btn.addEventListener('click', (event)=>billTheUser(event,4,5,6))
+    </script>
+</body>
+</html>
